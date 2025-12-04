@@ -72,7 +72,7 @@ void loop() {
   // Calculate tilt angles
   // =========================
   // Roll: rotation around X-axis (left/right tilt)
-  float roll  = atan2(a.acceleration.y, a.acceleration.z) * 180.0 / PI;
+  float roll = atan2(a.acceleration.y, sqrt(a.acceleration.x * a.acceleration.x + a.acceleration.z * a.acceleration.z)) * 180.0 / PI;
   // Pitch: rotation around Y-axis (forward/backward tilt)
   float pitch = atan2(-a.acceleration.x, sqrt(a.acceleration.y*a.acceleration.y + a.acceleration.z*a.acceleration.z)) * 180.0 / PI;
 
