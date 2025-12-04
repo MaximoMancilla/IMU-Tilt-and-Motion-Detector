@@ -87,14 +87,14 @@ void loop() {
   // =========================
   // LED Logic: Tilt Detection
   // =========================
-  // Forward/backward LEDs based on pitch
+  // Left/Right LEDs based on pitch
   if (pitch > TILT_THRESHOLD) {
     digitalWrite(LED_RIGHT, HIGH);
   } else if (pitch < -TILT_THRESHOLD) {
     digitalWrite(LED_LEFT, HIGH);
   }
 
-  // Left/right LEDs based on roll
+  // Forward/Backwards LEDs based on roll
   if (roll > TILT_THRESHOLD) {
     digitalWrite(LED_BACKWARD, HIGH);
   } else if (roll < -TILT_THRESHOLD) {
